@@ -30,3 +30,5 @@ function binarySearch(array, item) {
 console.log(binarySearch(array, 8));
 console.log(count);
 // за 1 итерацию
+
+// за 4 итерации можно найти любой элемент в массиве 
