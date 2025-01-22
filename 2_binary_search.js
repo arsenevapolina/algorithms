@@ -32,3 +32,32 @@ console.log(count);
 // за 1 итерацию
 
 // за 4 итерации можно найти любой элемент в массиве 
+
+
+
+
+// Рекурсивный способ реализации алгоритма бинарного поиска 
+
+function recursiveBinarySearch(array, item, start, end) {
+  // item - элемент, к-ый ищем
+  let middle = Math.floor((start + end) / 2);
+  // вычисляем центральный элемент 
+  count += 1;
+  if (item === array[middle]) {
+    return middle;
+    /*
+    Проверка: если искомый элемент = элементу, 
+    к-ый лежит в массиве по центральному индексу, к-й мы высчитали, 
+    то возвраащем позицию этого элемента - она будет = позиции центрального элемента. 
+    */
+  }
+  if (item < array[middle]) {
+    return recursiveBinarySearch(array, item, 0, middle - 1);
+    // 0 - стартовая позиция, middle (центральный индекс) - 1 - конечная позиция 
+  } else {
+    return recursiveBinarySearch(array, item, middle + 1, end);
+  }
+}
+
+console.log(recursiveBinarySearch(array, 0, 0, array.length));
+console.log(count);
