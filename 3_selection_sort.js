@@ -8,9 +8,9 @@ let count = 0;
 
 function selectionSort(array) {
   for (let i = 0; i < array.length; i++) {
-    let indexMin = 1;
+    let indexMin = i;
     for (let j = i + 1; j < array.length; j++) {
-      if (array[i] < array[indexMin]) {
+      if (array[j] < array[indexMin]) {
         indexMin = j;
       }
       count += 1;
